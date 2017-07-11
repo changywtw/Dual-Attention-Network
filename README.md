@@ -36,3 +36,4 @@ main program running training and testing phase of Dual Attention Network
 Dual_Attention_Network.py
 the implementation of Dual Attention Network
 
+!! the code is still dirty, please wait for more modification and refinement
