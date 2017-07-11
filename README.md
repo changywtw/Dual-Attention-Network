@@ -1,5 +1,5 @@
 # DAN
-Tensorflow implementation of Dual Attention Network
+Tensorflow implementation of Dual Attention Network https://arxiv.org/abs/1611.00471
 
 ./data 
 this folder pocesses all the preprocessed training and testing data
