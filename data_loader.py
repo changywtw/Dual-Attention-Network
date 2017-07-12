@@ -80,9 +80,7 @@ class data_loader():
             } 
         ) 
         i_out = features['i']  
-        q_id_out = features['q_id']  
-        #ques_out = tf.reshape( tf.decode_raw(features['ques'], tf.int32), [26]) 
-        #ques_out = ques_out[:self.max_words_q] 
+        q_id_out = features['q_id']   
         ques_out  = tf.reshape( tf.decode_raw(features['ques'], tf.int32), [self.max_words_q]) 
         q_len_out = features['q_len']  
         img_idx_out = features['img_idx']  
@@ -119,9 +117,7 @@ class data_loader():
             } 
         ) 
         i_out = features['i']  
-        q_id_out    = features['q_id']  
-        #ques_out    = tf.reshape( tf.decode_raw(features['ques'], tf.int32), [26])  #####
-        #ques_out    = ques_out[:self.max_words_q]  ######
+        q_id_out    = features['q_id']   
         ques_out     = tf.reshape( tf.decode_raw(features['ques'], tf.int32), [self.max_words_q])  ##### 
         q_len_out   = features['q_len']  
         img_idx_out = features['img_idx']  
@@ -239,7 +235,7 @@ class data_loader():
         for i in range(len(avn_list)):  
             alp_curr = avn_list[i].reshape(7,7)
             alp_img = skimage.transform.pyramid_expand(alp_curr, upscale=32, sigma=20)
-            scipy.misc.imsave('./output/'+str(qid)+'_'+str(i)+'_heat.jpg', alp_img)
+            scipy.misc.imsave('./output/'+str(qid)+'_'+str(i)+'.jpg', alp_img)
             
             img = Image.open('./output/'+str(qid)+'.jpg')
             heat = Image.open('./output/'+str(qid)+'_'+str(i)+'.jpg')
